@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BireBirChatActivity">
+
+    <LinearLayout
+        android:padding="10dp"
+        android:background="@color/design_default_color_primary"
+        android:id="@+id/yukari_bar"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/sohbetsayfasina_gonderme_resmi"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:layout_marginRight="10dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+
+        <LinearLayout
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/kullanici_adi_gosterme_chat_activity"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/background_light"
+                android:text="İsim burada "
+                android:layout_width="270dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/kullanici_durumu_gosterme_chat_activity"
+                android:text="Son görülme "
+                android:textColor="@android:color/background_light"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/yukari_bar"
+        android:id="@+id/kullanicilarin_ozel_mesajlarinin_listesi"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/chat_linear_layout">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <RelativeLayout
+        android:id="@+id/chat_linear_layout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/background_light"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/dosya_gonderme_btn"
+            android:src="@drawable/ic_baseline_attach_file_24"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:backgroundTint="@android:color/white"/>
+
+        <EditText
+            android:layout_toRightOf="@+id/dosya_gonderme_btn"
+            android:layout_toLeftOf="@+id/mesaj_gonder_btn"
+            android:id="@+id/girilen_mesaj"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="mesajınızı girin..."
+            android:textSize="16sp"
+            android:padding="14sp"
+            android:maxLines="5"
+            />
+
+        <ImageButton
+            android:id="@+id/mesaj_gonder_btn"
+            android:src="@drawable/ic_baseline_send_24"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:backgroundTint="@android:color/white"/>
+
+    </RelativeLayout>
+</RelativeLayout>
